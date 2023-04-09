@@ -85,7 +85,8 @@ const Card = ({ movie }) => {
 
 	const removeStorage = () => {
 		let wishData = window.localStorage.movies.split(',');
-		let newData = wishData.fliter((id) => id !== movie.id);
+		let newData = wishData.filter((id) => id != movie.id);
+		console.log('newData : ', newData);
 		window.localStorage.movies = newData;
 	};
 
